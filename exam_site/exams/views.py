@@ -1,7 +1,11 @@
 from django.shortcuts import render
-from .models import Kbexam  # Замените на вашу модель
+from .models import kbexam
 
 def exam_list(request):
-    exams = Kbexam.objects.filter(is_public=True)  # Замените на вашу модель
-    return render(request, 'exams/exam_list.html', {'exams': exams})
-# Create your views here.
+    exams = kbexam.objects.filter(is_public=True)
+    return render(request, 'exams/exam_list.html', {
+        'exams': exams,
+        'full_name': 'Баймухамедова Карина Ренатовна',
+        'group_number': '241-671'
+    })
+

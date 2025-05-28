@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-class Kbexam(models.Model):  # Убедитесь, что имя модели правильное
+class kbexam(models.Model):  # Убедитесь, что имя модели правильное
     title = models.CharField(max_length=200, verbose_name='Название экзамена')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания записи')
     exam_date = models.DateField(verbose_name='Дата проведения экзамена')
